@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ data.title }}</title>
+        <link type="text/css" href="/static/css/previm.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="/static/css/lib/mermaid.min.css" rel="stylesheet" media="all" />
+        <link type="text/css" href="/static/css/lib/bootstrap.css" rel="stylesheet" />
+        <link type="text/css" href="/static/css/lib/jquery-ui.css" rel="stylesheet"/>
+        <link type="text/css" href="/static/css/lib/jquery.tocify.css" rel="stylesheet"/>
+        <link type="text/css" href="/static/vendors/pure-drawer/css/pure-drawer.css" rel="stylesheet"/>
+        <link href='//fonts.googleapis.com/css?family=Noto+Serif|Noto+Sans|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/earlyaccess/notosansjapanese.css' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+        <style>
+          /* Fix #43 */
+          .section,
+          .section0,
+          .section1,
+          .section2,
+          .section3 {
+            opacity: unset;
+          }
+/* Drawer */
+.pure-toggle-label[data-toggle-label="right"] {
+  right: 0px;
+  left: auto;
+}
+.pure-toggle-label {
+  top: 0px;
+  width: 40px;
+  height: 40px;
+}
+.pure-toggle-label .pure-toggle-icon,
+.pure-toggle-label .pure-toggle-icon::before, 
+.pure-toggle-label .pure-toggle-icon::after {
+  height: 4px;
+  width: 25px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+.large-12 {
+    width: 100%;
+}
+.column, .columns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left;
+}
+.nav-primary {
+    margin: 0 15px 0;
+    padding: 100px 0 0 0;
+    border-bottom: 1px solid #24323d;
+}
+.nav-primary li {
+    border-top: 1px solid #24323d;
+    border-bottom: 1px solid #3f566a;
+}
+.nav-primary li a {
+    display: block;
+    color: #f0f0f0;
+    padding: 10px 15px;
+}
+        </style>
+    </head>
+    <body id="body">
+        <div id="header">
+            <span id="markdown-file-name">Loading...</span>
+            <small><span id="last-modified"></span></small>
+            <small><span id="age-ago"></span></small>
+        </div>
+        <div id="pure-drawer" data-effect="pure-effect-slide">
+            <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right" />
+            <label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right">
+                <span class="pure-toggle-icon"></span>
+            </label>
+            <nav class="pure-drawer" data-position="right">
+                <div class="row drawer-collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/pages">Pages</a></li>
+                            <li><a href="/pdf/{{data.path}}">Download PDF file</a></li>
+                            <li><a href="/blob/{{data.path}}">Download raw file</a></li>
+                            <li><a href="javascript:void(0);" id="switch-toc-display">Switch TOC display</a></li>
+                            <li><a href="javascript:void(0);" id="switch-realtime-preview">Switch realtime preview</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <label class="pure-overlay" for="pure-toggle-right" data-overlay="right"></label>
+        </div>
+        <div id="toc"></div>
+        <div id="preview"></div>
+        <div id="footer">
+            <script src="/static/js/lib/markdown-it.min.js"></script>
+            <script src="/static/js/lib/markdown-it-abbr.min.js"></script>
+            <script src="/static/js/lib/markdown-it-deflist.min.js"></script>
+            <script src="/static/js/lib/markdown-it-footnote.min.js"></script>
+            <script src="/static/js/lib/markdown-it-sub.min.js"></script>
+            <script src="/static/js/lib/markdown-it-sup.min.js"></script>
+            <script src="/static/js/lib/markdown-it-task-lists.min.js"></script>
+            <script src="/static/js/lib/markdown-it-emoji.min.js"></script>
+            <script src="/static/js/lib/highlight.pack.js"></script>
+            <script src="/static/js/lib/textile.js"></script>
+            <script src="/static/js/lib/mermaid.min.js"></script>
+            <script src="/static/js/lib/asciidoctor.min.js"></script>
+            <script src="/static/js/lib/jquery-1.11.1.min.js"></script>
+            <link rel="stylesheet" href="/static/js/lib/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+            <script type="text/javascript" src="/static/js/lib/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+            <script src="/static/js/lib/tocify/jquery-ui-1.9.1.custom.min.js"></script>
+            <script src="/static/js/lib/tocify/bootstrap.min.js"></script>
+            <script src="/static/js/lib/tocify/jquery.tocify.min.js"></script>
+            <script src="/js/previm.js?path={{ data.path }}"></script>
+            <div id="monitor"></div>
+        </div>
+    </body>
+</html>

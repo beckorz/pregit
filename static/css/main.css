@@ -1,0 +1,18 @@
+.dir {
+    background-image: url(/static/vendors/octicons-4.3.0/build/svg/file-directory.svg);
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.file {
+    background-image: url(/static/vendors/octicons-4.3.0/build/svg/file.svg);
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.list-group-item {
+    padding: 0.1rem 1.25rem;
+    margin-bottom: -1px;
+}

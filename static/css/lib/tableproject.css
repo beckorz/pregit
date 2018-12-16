@@ -1,0 +1,22 @@
+/*************************************************
+ * 罫線化プロジェクト開始
+ ************************************************/
+
+/* listの枠 test的 */
+ul, ol {
+/*    border: 1px solid #000000;
+    margin: 0;
+    padding-left: 20px;*/ /* UL親の余白 */
+}
+
+/* parent: child */
+.parent {
+    border: 1px solid #000;
+    float: left;
+    margin: 0;
+    padding: 0 5px;
+}
+.child {
+
+}
+

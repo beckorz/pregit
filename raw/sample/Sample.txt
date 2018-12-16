@@ -1,0 +1,148 @@
+# Markdown preview sample
+
+see: [Raw file of this file](/blob/test-files/Sample.txt).
+see: [PDF file of this file](/pdf/test-files/Sample.txt).
+
+## Link
+- [Internal Link(Normal)](res/Ubuntu_01.png)
+- [Internal Link(Relative)](../Sample.txt)
+- [Internal Link(Anchor to Image)](#Image)
+- [Internal Link(Absolute)](/test-files/Sample.txt)
+- [External Link(Open new tab)](http://www.google.com)
+
+## Decolate string
+
+`Inline highlight.` **Bold.** ***Italic.*** ~~Strikeout.~~
+
+## <p id="Image">Image</p>
+`![Alt text](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)`
+![Alt text](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
+
+## Comment
+```html
+<!-- This is a comment, you cannot see it -->
+```
+<!-- This is a comment, you cannot see it -->
+
+## Keyboard
+`<kbd>⌘</kbd>`
+<kbd>⌘</kbd>+<kbd>c</kbd> or <kbd>CTRL</kbd>+<kbd>C</kbd>
+<kbd>Alt</kbd>+<kbd>d</kbd>
+shift <kbd>⇧</kbd>
+option <kbd>⌥</kbd>
+control <kbd>⌃</kbd>
+caps lock <kbd>⇪</kbd>
+<kbd>fn</kbd>
+
+## Task list & List item
+`- [ ] task`
+`- [x] done`
+- [ ] task
+- [x] done
+    - [ ] nested task
+        1. order
+        1. order
+            1. nested order
+        - hoge
+
+## Emoji😁
+`:sushi:` => :sushi:
+
+## Footnote
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+## Table
+
+|No     |Text                              |
+|------:|:---------------------------------|
+|1      |hoge                              |
+|2      |foo<br />bar                      |
+|foo    |[000-0123-4567](tel:000-0123-4567)|
+|bar    |example@example.com               |
+
+
+## Subscript
+
+`H~2~O` => H<sub>2</sub>O
+
+## Superscript
+
+`2^10^` => 2<sup>10</sub>
+
+## Definition lists
+see: [PHP Markdown Extra#Definition Lists](https://michelf.ca/projects/php-markdown/extra/#def-list)
+
+Term 1
+
+:   Definition 1
+
+## Block style
+
+> This is a block quote.
+>> Nested.
+
+## Fenced code block
+see: [Creating and highlighting code blocks - User Documentation](https://help.github.com/articles/creating-and-highlighting-code-blocks/)
+
+    ```lang
+    code block
+    ```
+
+```js
+/**
+ * Javascript
+ */
+
+function hoge(){
+  alert('hoge');
+}
+```
+
+```sql
+/**
+ * Comment
+ */
+SELECT * FROM hoge;
+```
+
+## Mermaid
+See [Official site](https://mermaidjs.github.io/)
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->E;
+```
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+```
+
+
+## Like operation manual
+
+1. Mount iso file.(ubuntu-ja-18.04.1-desktop-amd64.iso (2GB))
+
+2. Select.
+   ![alt text 1](res/Ubuntu_01.png)
+3. View
+   ![alt text 2](res/Ubuntu_02.png)
+
