@@ -123,9 +123,6 @@ def execute_cmd(rep, cmd):
     p.stdout.flush()
     p.wait()
     out, err = p.communicate()
-    if err:
-        app.logger.error(err)
-        raise IOError(err)
     return data
 
 
